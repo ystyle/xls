@@ -36,7 +36,7 @@ func OpenReader(reader io.ReadSeeker, charset string) (wb *WorkBook, err error) 
 			var root *ole2.File
 			for _, file := range dir {
 				name := file.Name()
-				if name == "Workbook" {
+				if name == "Workbook" || name == "WORKBOOK" {
 					if book == nil {
 						book = file
 					}
